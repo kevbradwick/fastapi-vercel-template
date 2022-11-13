@@ -27,6 +27,10 @@ Testing is configured using [Pytest](https://docs.pytest.org/) and can be run wi
 
     make test
 
+You can run coverage and view the report in a browser by setting the `COVERAGE` env var.
+
+    COVERAGE=1 make test
+
 ## Formatting
 
 The project is configured to use [black](https://github.com/psf/black), [autoflake](https://github.com/PyCQA/autoflake) and [isort](https://pycqa.github.io/isort/) and can be run using the following
