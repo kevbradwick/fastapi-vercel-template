@@ -13,6 +13,10 @@ First, make sure you have the [Vercel CLI](https://vercel.com/docs/cli) installe
 
 Vercel does not work with [Python Poetry](https://python-poetry.org/) so a requirements file will need to be generated. The `deploy` make target will generate a `requirements.txt` file prior to deploying. This is also added to the [.gitignore](./.gitignore) file so will be ignored by source control.
 
+You can also deploy to prod using the `PROD` env var
+
+    PROD=1 make deploy
+
 ## Running the app locally
 
 The app can be started from the command line with the following command.
