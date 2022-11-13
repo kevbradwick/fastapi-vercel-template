@@ -21,10 +21,17 @@ else
 	poetry run python -m http.server --directory htmlcov
 endif
 
-.PHONY: deploy
-deploy: clean
+.PHONY: requirements
+requirements:
 	poetry export --without-hashes --format=requirements.txt > requirements.txt
+
+.PHONY: deploy
+deploy: clean requirements
+ifndef PROD
 	vercel
+else
+	vercel --prod
+endif
 
 .PHONY: fmt
 fmt:

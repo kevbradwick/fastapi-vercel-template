@@ -1,0 +1,10 @@
+.vscode
+tests
+.editorconfig
+.gitignore
+Makefile
+poetry.lock
+pyproject.toml
+htmlcov
+.coverage
+.pytest_cache
