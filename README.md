@@ -13,10 +13,22 @@ First, make sure you have the [Vercel CLI](https://vercel.com/docs/cli) installe
 
 Vercel does not work with [Python Poetry](https://python-poetry.org/) so a requirements file will need to be generated. The `deploy` make target will generate a `requirements.txt` file prior to deploying. This is also added to the [.gitignore](./.gitignore) file so will be ignored by source control.
 
-## Local development
+## Running the app locally
 
 The app can be started from the command line with the following command.
 
     make run
 
 There is also a [VSCode](https://code.visualstudio.com/) launch configuration that you can use to run using the debugger.
+
+## Testing
+
+Testing is configured using [Pytest](https://docs.pytest.org/) and can be run with the following command
+
+    make test
+
+## Formatting
+
+The project is configured to use [black](https://github.com/psf/black), [autoflake](https://github.com/PyCQA/autoflake) and [isort](https://pycqa.github.io/isort/) and can be run using the following
+
+    make fmt
